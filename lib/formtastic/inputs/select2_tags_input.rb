@@ -10,8 +10,7 @@ module Formtastic
           data: {
             select2: {
               tags: options[:collection],
-              tokenSeparators: [',', ' '],
-              data: options[:values]
+              tokenSeparators: [',', ' ']
             }
           }
         }.merge(super)
