@@ -7,6 +7,7 @@ module Formtastic
       def input_html_options
         {
           class: 'select2-input select2-tags-input',
+          multiple: true,
           data: {
             select2: {
               tags: options[:collection],
