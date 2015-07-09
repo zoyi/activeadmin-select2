@@ -6,8 +6,13 @@ module Formtastic
     class Select2TagsInput < Formtastic::Inputs::StringInput
       def input_html_options
         {
-            class: 'select2-input select2-tags-input',
-            data: { select2: { tags: options[:collection] }}
+          class: 'select2-input select2-tags-input',
+          data: {
+            select2: {
+              tags: options[:collection],
+              tokenSeparators: [',', ' ']
+            }
+          }
         }.merge(super)
       end
     end
